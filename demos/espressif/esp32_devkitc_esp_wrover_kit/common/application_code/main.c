@@ -1,5 +1,5 @@
 /*
- * Amazon FreeRTOS V1.2.7
+ * Amazon FreeRTOS V1.2.5
  * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -161,6 +161,8 @@ static void prvMiscInitialization( void )
 }
 /*-----------------------------------------------------------*/
 
+//extern void sensor_app_main();
+extern void vStartRandDemo();
 void vApplicationDaemonTaskStartupHook( void )
 {
     if( SYSTEM_Init() == pdPASS )
@@ -168,7 +170,9 @@ void vApplicationDaemonTaskStartupHook( void )
         /* Connect to the wifi before running the demos */
         prvWifiConnect();
         /* Run all demos. */
-        DEMO_RUNNER_RunDemos();
+        //DEMO_RUNNER_RunDemos();
+        //sensor_app_main();
+        vStartRandDemo();
     }
 }
 /*-----------------------------------------------------------*/
