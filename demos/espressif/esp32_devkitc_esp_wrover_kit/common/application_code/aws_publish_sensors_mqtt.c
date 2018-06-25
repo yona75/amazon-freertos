@@ -98,7 +98,7 @@
  *
  * It must be unique per MQTT broker.
  */
-#define echoCLIENT_ID          ( ( const uint8_t * ) "esp32-antonsh" )
+#define echoCLIENT_ID          ( ( const uint8_t * ) "esp32" )
 
 /**
  * @brief The topic that the MQTT client both subscribes and publishes to.
