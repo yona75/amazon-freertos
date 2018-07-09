@@ -161,8 +161,8 @@ static void prvMiscInitialization( void )
 }
 /*-----------------------------------------------------------*/
 
-//extern void sensor_app_main();
-extern void vStartRandDemo();
+extern void app_main();
+//extern void vStartRandDemo();
 void vApplicationDaemonTaskStartupHook( void )
 {
     if( SYSTEM_Init() == pdPASS )
@@ -171,8 +171,8 @@ void vApplicationDaemonTaskStartupHook( void )
         prvWifiConnect();
         /* Run all demos. */
         //DEMO_RUNNER_RunDemos();
-        //sensor_app_main();
-        vStartRandDemo();
+        app_main();
+        //vStartRandDemo();
     }
 }
 /*-----------------------------------------------------------*/
