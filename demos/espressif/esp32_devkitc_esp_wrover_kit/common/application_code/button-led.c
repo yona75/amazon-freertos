@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "message_buffer.h"
+#include "semphr.h"
+
 #include "driver/gpio.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/semphr.h"
 
 #define ESP_INTR_FLAG_DEFAULT 0
 
@@ -36,7 +39,7 @@ void button_task(void* arg) {
 	}
 }
 
-void app_main()
+void button_led_app_main()
 {
 	
 	// create the binary semaphore

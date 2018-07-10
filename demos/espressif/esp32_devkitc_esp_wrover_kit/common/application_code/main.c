@@ -161,7 +161,7 @@ static void prvMiscInitialization( void )
 }
 /*-----------------------------------------------------------*/
 
-extern void app_main();
+extern void button_led_app_main();
 //extern void vStartRandDemo();
 void vApplicationDaemonTaskStartupHook( void )
 {
@@ -171,7 +171,7 @@ void vApplicationDaemonTaskStartupHook( void )
         prvWifiConnect();
         /* Run all demos. */
         //DEMO_RUNNER_RunDemos();
-        app_main();
+        button_led_app_main();
         //vStartRandDemo();
     }
 }
